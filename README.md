@@ -3,7 +3,7 @@
 シンプルなHTML/CSS/JSのみで作成した6ページ構成のホームページです。
 サーバー不要で、`index.html` をブラウザで開くだけで表示できます。
 
-現在のバージョン：**v2.0**（更新履歴は [CHANGELOG.md](./CHANGELOG.md) を参照）
+現在のバージョン：**v2.4**（更新履歴は [CHANGELOG.md](./CHANGELOG.md) を参照）
 
 ## ファイル構成
 
@@ -31,14 +31,19 @@ CHANGELOG.md           … 更新履歴（バージョン管理）
 - 設立：2018年12月25日
 - ロゴ：`images/logo.png`（ヘッダーに表示）
 
-## 画像プレースホルダーについて
+## 写真の反映状況（写真1〜7）
 
-以下の箇所は、実際の写真をご用意いただき次第、差し替え可能な空欄（点線枠）になっています。枠内に推奨サイズと内容の説明を記載していますので、写真をお送りいただければ差し替え作業を承ります。
+| 番号 | ページ | 掲載箇所 | 状態 |
+|---|---|---|---|
+| 写真1 | company.html（会社概要） | 経営理念 | 反映済み（`images/philosophy.jpg`） |
+| 写真2 | company.html（会社概要） | 代表メッセージ | 反映済み（`images/representative.jpg`） |
+| 写真3 | company.html（会社概要） | アクセス | 反映済み（`images/access.jpg`） |
+| 写真4 | service.html（事業内容） | 電力コンサルティング | 反映済み（`images/service-power.jpg`） |
+| 写真5 | service.html（事業内容） | 省エネ・断熱・空調 | 反映済み（`images/service-energy.jpg`） |
+| 写真6 | sustainability.html（サステナビリティ） | 取り組みイメージ | 反映済み（`images/sustainability.jpg`） |
+| 写真7 | contact.html（お問い合わせ） | オフィス写真 | 反映済み（`images/contact-office.jpg`） |
 
-- トップページ：会社概要ページ「経営理念」「代表メッセージ」「アクセス」
-- 事業内容ページ：電力コンサルティング／省エネ・断熱・空調コンサルティング
-- サステナビリティページ：取り組みイメージ写真
-- お問い合わせページ：オフィス写真
+TOPページのメイン写真（`images/hero-collage.jpg`）も新しい画像に差し替え済みです。
 
 ## お知らせページについて
 

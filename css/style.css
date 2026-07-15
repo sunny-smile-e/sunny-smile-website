@@ -588,6 +588,7 @@ section {
 }
 
 .philosophy-media {
+  position: relative;
   height: 280px;
   border-radius: var(--radius);
   background: linear-gradient(135deg, rgba(59, 130, 196, 0.18), rgba(43, 214, 164, 0.18));
@@ -601,8 +602,50 @@ section {
   padding: 20px;
 }
 
-/* 会社写真を入れる場合は .philosophy-media を
-   <img src="../images/philosophy.jpg" alt="..."> に置き換えてください */
+/* ---------- 写真プレースホルダーの番号バッジ ---------- */
+.ph-number {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(11, 41, 66, 0.3);
+  z-index: 1;
+}
+
+.ph-label {
+  display: block;
+  font-weight: 700;
+  color: var(--color-navy);
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+/* ---------- 実写真が入った状態のプレースホルダー枠 ---------- */
+.philosophy-media.has-photo,
+.img-placeholder.has-photo {
+  background: none;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+.philosophy-media.has-photo img,
+.img-placeholder.has-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
 
 .ph-icon {
   display: block;
@@ -612,6 +655,7 @@ section {
 
 /* ---------- 画像プレースホルダー（共通） ---------- */
 .img-placeholder {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
