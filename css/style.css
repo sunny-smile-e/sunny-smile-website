@@ -169,7 +169,7 @@ ul {
 .hero-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 100px 24px 120px;
+  padding: 38px 24px 120px;
   position: relative;
   z-index: 2;
 }
@@ -177,10 +177,10 @@ ul {
 .hero-grid {
   max-width: 1440px;
   display: grid;
-  grid-template-columns: 1fr 1.7fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: 48px;
-  align-items: center;
-  padding-top: 72px;
+  align-items: flex-start;
+  padding-top: 38px;
   padding-bottom: 72px;
 }
 
@@ -203,11 +203,18 @@ ul {
 }
 
 .hero h1 {
-  font-size: clamp(1.4rem, 2.3vw, 2.1rem);
-  line-height: 1.6;
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  line-height: 1.4;
   margin: 0 0 20px;
   font-weight: 700;
   white-space: nowrap;
+}
+
+/* 2カラムに切り替わる幅では、実際に使える横幅に合わせて上限を調整 */
+@media (min-width: 1001px) {
+  .hero h1 {
+    font-size: clamp(1.8rem, 2.9vw, 2.7rem);
+  }
 }
 
 .hero p {
@@ -508,14 +515,14 @@ section {
 
 .stat-item .num {
   display: block;
-  font-size: 2.1rem;
+  font-size: 2.7rem;
   font-weight: 700;
   color: var(--color-navy);
   line-height: 1.3;
 }
 
 .stat-item .num span {
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   font-weight: 700;
 }
 
@@ -523,7 +530,7 @@ section {
   display: block;
   margin-top: 6px;
   font-size: 0.85rem;
-  color: var(--color-text-light);
+  color: var(--color-navy);
 }
 
 /* ---------- CTA ---------- */
@@ -594,14 +601,8 @@ section {
   padding: 20px;
 }
 
-img.philosophy-media {
-  background: none;
-  border: none;
-  padding: 0;
-  display: block;
-  object-fit: cover;
-  box-shadow: var(--shadow);
-}
+/* 会社写真を入れる場合は .philosophy-media を
+   <img src="../images/philosophy.jpg" alt="..."> に置き換えてください */
 
 .ph-icon {
   display: block;
@@ -892,4 +893,503 @@ img.philosophy-media {
 }
 
 .form-card {
-  background: var(
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 36px 34px;
+  box-shadow: var(--shadow);
+}
+
+.form-row {
+  margin-bottom: 22px;
+}
+
+.form-row label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: var(--color-navy);
+}
+
+.form-row .required {
+  color: #e0554f;
+  font-size: 0.75rem;
+  margin-left: 6px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-family: var(--font-base);
+  font-size: 0.95rem;
+  background: #fafcfd;
+}
+
+.form-row textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--color-blue);
+  background: #fff;
+}
+
+.form-note {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  margin-top: -8px;
+  margin-bottom: 22px;
+}
+
+/* ---------- フッター ---------- */
+.site-footer {
+  background: var(--color-navy-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 60px 0 28px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand .logo {
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.footer-brand p {
+  font-size: 0.88rem;
+  max-width: 320px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-col h4 {
+  color: #fff;
+  font-size: 0.9rem;
+  margin: 0 0 16px;
+}
+
+.footer-col ul {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-col a {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-col a:hover {
+  color: var(--color-accent);
+}
+
+.footer-bottom {
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ---------- パンくず ---------- */
+.breadcrumb {
+  padding: 20px 0;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.breadcrumb a {
+  color: var(--color-blue);
+}
+
+.page-hero {
+  background: linear-gradient(120deg, var(--color-navy) 0%, var(--color-blue) 55%, var(--color-accent) 100%);
+  color: #fff;
+  padding: 64px 0;
+  text-align: center;
+}
+
+.page-hero .hero-eyebrow {
+  margin-bottom: 16px;
+}
+
+.page-hero h1 {
+  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  margin: 0 0 12px;
+}
+
+.page-hero p {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* ==========================================================
+   先進的・おしゃれな印象づくりのための追加装飾（v2.0）
+   ========================================================== */
+
+/* ---------- ヒーロー背景装飾（ドットグリッド＋グロー） ---------- */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  mask-image: radial-gradient(ellipse 80% 60% at 30% 20%, #000 40%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 30% 20%, #000 40%, transparent 90%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 55%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(43, 214, 164, 0.28), transparent 65%);
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  z-index: 2;
+}
+
+/* セクション同士の境目に、ゆるい波型の切れ目を入れる */
+.hero-wave {
+  display: block;
+  width: 100%;
+  height: 48px;
+  margin-top: -1px;
+  line-height: 0;
+}
+
+/* ---------- ナビゲーションの下線アニメーション ---------- */
+.main-nav a {
+  padding-bottom: 6px;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -1px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-blue), var(--color-accent));
+  border-radius: 2px;
+  transition: right 0.25s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.is-active::after {
+  right: 0;
+}
+
+/* ---------- カード類のホバー演出 ---------- */
+.strength-card,
+.service-card,
+.flow-item,
+.stat-item,
+.faq-item,
+.news-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.strength-card:hover,
+.service-card:hover,
+.flow-item:hover,
+.stat-item:hover,
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(11, 41, 66, 0.14);
+  border-color: rgba(43, 214, 164, 0.4);
+}
+
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-position 0.4s ease;
+}
+
+.btn-primary {
+  background-size: 160% 100%;
+  background-position: 0% 0%;
+}
+
+.btn-primary:hover {
+  background-position: 100% 0%;
+  transform: translateY(-3px);
+}
+
+/* ---------- スクロールリビール（JSでis-visibleを付与） ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.is-visible > * {
+  animation: reveal-fade-up 0.6s ease both;
+}
+
+.reveal-stagger.is-visible > *:nth-child(1) { animation-delay: 0.05s; }
+.reveal-stagger.is-visible > *:nth-child(2) { animation-delay: 0.15s; }
+.reveal-stagger.is-visible > *:nth-child(3) { animation-delay: 0.25s; }
+.reveal-stagger.is-visible > *:nth-child(4) { animation-delay: 0.35s; }
+
+@keyframes reveal-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- SDGs アイコングリッド（sustainability.html） ---------- */
+.sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.sdg-item {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px 18px;
+  text-align: center;
+}
+
+.sdg-item .sdg-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--color-blue), var(--color-accent));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.sdg-item h3 {
+  margin: 0 0 8px;
+  font-size: 0.98rem;
+  color: var(--color-navy);
+}
+
+.sdg-item p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+/* ---------- ニュース一覧（news.html） ---------- */
+.news-list {
+  display: grid;
+  gap: 20px;
+}
+
+.news-card {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  align-items: center;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  box-shadow: var(--shadow);
+}
+
+.news-card .news-date {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.news-card .news-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-accent-dark);
+  background: rgba(43, 214, 164, 0.12);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 8px;
+}
+
+.news-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  color: var(--color-navy);
+}
+
+.news-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.news-empty {
+  background: var(--color-card);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+  padding: 60px 24px;
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+.news-empty .ph-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 14px;
+}
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 860px) {
+  .strengths-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sdg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .news-card {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  .flow-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .philosophy-block {
+    grid-template-columns: 1fr;
+  }
+  .access-block {
+    grid-template-columns: 1fr;
+  }
+  .compare-table th:first-child,
+  .compare-table td:first-child {
+    width: auto;
+  }
+  .service-detail {
+    grid-template-columns: 1fr;
+  }
+  .service-detail-media {
+    order: -1;
+    height: 220px;
+  }
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    display: none;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* タブレット中間幅で見出しが詰まりすぎないよう、この範囲だけ1カラムに */
+@media (max-width: 1000px) and (min-width: 861px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* 極端に幅の狭い端末では改行を許可し、はみ出しを防ぐ */
+@media (max-width: 400px) {
+  .hero h1 {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-nav {
+    position: fixed;
+    top: 66px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--color-border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+  .main-nav.is-open {
+    max-height: 460px;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 24px 20px;
+  }
+  .main-nav a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .flow-list {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .sdg-grid {
+    grid-template-columns: 1fr;
+  }
+  section {
+    padding: 60px 0;
+  }
+  .hero-inner {
+    padding: 38px 24px 90px;
+  }
+  .company-table th {
+    width: 130px;
+    font-size: 0.85rem;
+  }
+  .company-table th,
+  .company-table td {
+    padding: 14px 16px;
+  }
+}

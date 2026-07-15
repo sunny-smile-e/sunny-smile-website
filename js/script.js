@@ -50,4 +50,31 @@ document.addEventListener("DOMContentLoaded", function () {
       link.classList.add("is-active");
     }
   });
+
+  // ---- スクロールリビール（画面内に入ったらフェードイン） ----
+  var revealTargets = document.querySelectorAll(".reveal, .reveal-stagger");
+  var prefersReducedMotion =
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (revealTargets.length && !prefersReducedMotion && "IntersectionObserver" in window) {
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+    );
+    revealTargets.forEach(function (el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    // 非対応ブラウザやモーション低減設定時は、そのまま表示
+    revealTargets.forEach(function (el) {
+      el.classList.add("is-visible");
+    });
+  }
 });

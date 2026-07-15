@@ -1,3 +1,4 @@
+<!-- Sunny Smile株式会社 サイト v2.0 / 2026-07-15: デザイン刷新・ページ追加（news, sustainability）詳細は CHANGELOG.md を参照 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -21,6 +22,8 @@
         <li><a href="index.html">トップ</a></li>
         <li><a href="company.html">会社概要</a></li>
         <li><a href="service.html">事業内容</a></li>
+        <li><a href="sustainability.html">サステナビリティ</a></li>
+        <li><a href="news.html">お知らせ</a></li>
         <li><a href="contact.html">お問い合わせ</a></li>
       </ul>
     </nav>
@@ -47,14 +50,14 @@
         </div>
       </div>
       <div class="hero-media">
-        <img src="images/hero-collage.jpg" alt="Sunny Smileの電力コンサルティング・省エネ空調コンサルティングの取り組み">
+        <img src="images/hero-collage.jpg" alt="Sunny Smile株式会社の電力コンサルティング・断熱空調診断・太陽光/HVACの取り組み">
       </div>
     </div>
   </section>
 
   <section class="bg-alt" style="padding-top:56px; padding-bottom:56px;">
     <div class="container">
-      <div class="stats-grid">
+      <div class="stats-grid reveal-stagger">
         <div class="stat-item">
           <span class="num">30<span>年</span></span>
           <span class="label">の実績</span>
@@ -80,9 +83,9 @@
       <div class="section-head">
         <span class="section-eyebrow">STRENGTH</span>
         <h2>選ばれる3つの理由</h2>
-        <p>専門知識と実績に基づき、お客様に最適なご提案をいたします。</p>
+        <p style="color:var(--color-navy);">専門知識と実績に基づき、お客様に最適なご提案をいたします。</p>
       </div>
-      <div class="strengths-grid">
+      <div class="strengths-grid reveal-stagger">
         <div class="strength-card">
           <div class="strength-icon">🏭</div>
           <h3>製造業・工場に特化</h3>
@@ -107,9 +110,9 @@
       <div class="section-head">
         <span class="section-eyebrow">SERVICE</span>
         <h2>事業内容</h2>
-        <p>電力コンサルティングと省エネ・断熱・空調コンサルティングの2つの領域でサポートします。</p>
+        <p style="color:var(--color-navy);">電力コンサルティングと省エネ・断熱・空調コンサルティングの<br>2つの領域でサポートします。</p>
       </div>
-      <div class="service-grid">
+      <div class="service-grid reveal-stagger">
         <div class="service-card">
           <div class="service-card-media power">⚡</div>
           <div class="service-card-body">
@@ -149,7 +152,7 @@
         <h2>ご依頼の流れ</h2>
         <p>お問い合わせから提案まで、丁寧にサポートいたします。</p>
       </div>
-      <div class="flow-list">
+      <div class="flow-list reveal-stagger">
         <div class="flow-item">
           <h4>お問い合わせ</h4>
           <p>フォームまたはお電話にてお気軽にご相談ください。</p>
@@ -160,10 +163,48 @@
         </div>
         <div class="flow-item">
           <h4>ご提案</h4>
-          <p><!-- TODO: 元データがここで途切れていました。「ご提案」ステップの続きの文章をご確認のうえご記入ください --></p>
+          <p>分析結果をもとに、最適なプランをご提案します。</p>
         </div>
-        <!-- TODO: 他にもステップがある場合はここに追加してください -->
+        <div class="flow-item">
+          <h4>導入・アフターフォロー</h4>
+          <p>導入後も効果検証やフォローを継続して行います。</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="bg-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">FAQ</span>
+        <h2>よくあるご質問</h2>
+      </div>
+      <div class="faq-list reveal-stagger">
+        <details class="faq-item">
+          <summary>契約中の電力会社を変更する際、工事や停電は必要ですか？</summary>
+          <p>不要です。契約先の切り替えのみで、設備工事や停電は発生しません。</p>
+        </details>
+        <details class="faq-item">
+          <summary>対応エリアはどこまでですか？</summary>
+          <p>2025年6月より対応エリアを拡大し、沖縄・北海道を除く日本全国のお客様にご相談いただけます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>相談だけでも可能ですか？</summary>
+          <p>もちろんです。現在のご契約内容が適正な相場かどうかの診断のみでも、お気軽にお問い合わせください。</p>
+        </details>
+        <details class="faq-item">
+          <summary>省エネ工事だけの依頼も可能ですか？</summary>
+          <p>可能です。断熱塗装や空調更新、太陽光発電の設置など、必要な工事のみのご依頼にも対応しています。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>まずはお気軽にご相談ください</h2>
+      <p>電力コスト・省エネ対策でお悩みの方は、お電話またはメールでお気軽にご連絡ください。</p>
+      <a href="contact.html" class="btn btn-primary">お問い合わせはこちら</a>
     </div>
   </section>
 
@@ -181,24 +222,10 @@
           <li><a href="index.html">トップ</a></li>
           <li><a href="company.html">会社概要</a></li>
           <li><a href="service.html">事業内容</a></li>
+          <li><a href="sustainability.html">サステナビリティ</a></li>
+          <li><a href="news.html">お知らせ</a></li>
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>お問い合わせ</h4>
-        <ul>
-          <li><a href="tel:08012468873">TEL：080-1246-8873</a></li>
-          <li><a href="mailto:sunny-smile@dc4.so-net.ne.jp">sunny-smile@dc4.so-net.ne.jp</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      &copy; <span id="year"></span> Sunny Smile All Rights Reserved.
-    </div>
-  </div>
-</footer>
-
-<script src="js/script.js"></script>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</body>
-</html>
+        <h4>お問い合わせ</h
