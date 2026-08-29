@@ -1,4 +1,4 @@
-<!-- Sunny Smile株式会社 サイト v4.0 / 2026-08-29: 会社案内2026に合わせてTOPページをリニューアル（市場動向バンド・2本部体制・削減実績・比較・ご負担・流れを追加）。詳細は CHANGELOG.md を参照 -->
+<!-- Sunny Smile株式会社 サイト v4.1 / 2026-08-29: 会社案内2026に合わせてTOPページをリニューアル（市場動向バンド・2本部体制・削減実績・比較・ご負担・流れを追加）／ナビの「事業内容」に電力・環境改善・福祉本部へ直接飛べるサブメニューを追加。詳細は CHANGELOG.md を参照 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -618,6 +618,109 @@
   }
 }
 
+/* ---------- グローバルナビのサブメニュー（v4.1で追加） ----------
+   「事業内容」にマウスを乗せると、電力／環境改善／福祉本部へ直接飛べる
+   ドロップダウンを表示します。スマートフォンでは常時展開（インデント表示）。 */
+.main-nav li.has-sub {
+  position: relative;
+}
+
+.main-nav li.has-sub > a .caret {
+  font-size: 0.62rem;
+  margin-left: 5px;
+  vertical-align: 1px;
+  color: var(--color-accent-dark);
+}
+
+.main-nav .sub-nav {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: -16px;
+  min-width: 244px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 14px 30px rgba(11, 41, 66, 0.14);
+  padding: 8px 0;
+  margin-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  z-index: 200;
+}
+
+.main-nav li.has-sub:hover > .sub-nav,
+.main-nav li.has-sub:focus-within > .sub-nav {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.main-nav .sub-nav::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.main-nav .sub-nav li {
+  display: block;
+}
+
+.main-nav .sub-nav a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-navy);
+  white-space: nowrap;
+}
+
+.main-nav .sub-nav a::after {
+  display: none;
+}
+
+.main-nav .sub-nav a:hover {
+  background: rgba(43, 214, 164, 0.1);
+  color: var(--color-accent-dark);
+}
+
+/* 見出しへジャンプしたとき、固定ヘッダーに隠れないようにする */
+#power,
+#energy,
+#welfare {
+  scroll-margin-top: 92px;
+}
+
+@media (max-width: 640px) {
+  .main-nav .sub-nav {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    min-width: 0;
+    margin-top: 0;
+    padding: 0 0 0 16px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .main-nav .sub-nav a {
+    padding: 11px 0;
+    font-size: 0.87rem;
+    color: var(--color-text-light);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .main-nav.is-open {
+    max-height: 760px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -631,7 +734,14 @@
       <ul>
         <li><a href="index.html" class="is-active">トップ</a></li>
         <li><a href="company.html">会社概要</a></li>
-        <li><a href="service.html">事業内容</a></li>
+        <li class="has-sub">
+          <a href="service.html">事業内容<span class="caret">▾</span></a>
+          <ul class="sub-nav">
+            <li><a href="service.html#power">電力コンサルティング</a></li>
+            <li><a href="service.html#energy">環境改善・省エネ・断熱・空調</a></li>
+            <li><a href="service.html#welfare">福祉本部（保育・介護）</a></li>
+          </ul>
+        </li>
         <li><a href="sustainability.html">サステナビリティ</a></li>
         <li><a href="news.html">お知らせ</a></li>
         <li><a href="contact.html">お問い合わせ</a></li>
@@ -987,7 +1097,14 @@
         <ul>
           <li><a href="index.html">トップ</a></li>
           <li><a href="company.html">会社概要</a></li>
-          <li><a href="service.html">事業内容</a></li>
+          <li class="has-sub">
+          <a href="service.html">事業内容<span class="caret">▾</span></a>
+          <ul class="sub-nav">
+            <li><a href="service.html#power">電力コンサルティング</a></li>
+            <li><a href="service.html#energy">環境改善・省エネ・断熱・空調</a></li>
+            <li><a href="service.html#welfare">福祉本部（保育・介護）</a></li>
+          </ul>
+        </li>
           <li><a href="sustainability.html">サステナビリティ</a></li>
           <li><a href="news.html">お知らせ</a></li>
           <li><a href="contact.html">お問い合わせ</a></li>
