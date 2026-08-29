@@ -1,0 +1,487 @@
+/* ==========================================================
+   Sunny Smile株式会社 サイト 追加スタイル v4.0（2026-08-29）
+   会社案内2026（Company Profile 2026）対応で追加したパーツ用。
+   ※ style.css の後ろに読み込みます。既存の style.css は変更していません。
+   ========================================================== */
+
+:root {
+  --color-gold: #b08b3f;
+  --color-gold-soft: #f4efe3;
+}
+
+/* ---------- 注意喚起バンド（市場動向アラート） ---------- */
+.alert-band {
+  background: linear-gradient(120deg, var(--color-navy), var(--color-navy-dark));
+  color: #fff;
+  padding: 40px 0;
+}
+
+.alert-band-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: center;
+}
+
+.alert-band .alert-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #0b2942;
+  background: var(--color-accent);
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 12px;
+}
+
+.alert-band h2 {
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.alert-band p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.alert-band .marker {
+  background: linear-gradient(transparent 62%, rgba(43, 214, 164, 0.45) 62%);
+  padding: 0 2px;
+}
+
+/* ---------- 本部（事業領域）カード ---------- */
+.division-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.division-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-navy);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.division-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(11, 41, 66, 0.14);
+}
+
+.division-card.welfare {
+  border-top-color: var(--color-gold);
+}
+
+.division-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #fff;
+  background: var(--color-navy);
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.division-card.welfare .division-badge {
+  background: var(--color-gold);
+}
+
+.division-card h3 {
+  display: inline;
+  font-size: 1.12rem;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.division-card .division-lead {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin: 16px 0 18px;
+}
+
+.division-card ul {
+  display: grid;
+  gap: 10px;
+}
+
+.division-card ul li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.92rem;
+}
+
+.division-card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  background: var(--color-accent);
+}
+
+.division-card.welfare ul li::before {
+  background: var(--color-gold);
+}
+
+/* ---------- 削減実績（ケーススタディ） ---------- */
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.case-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(11, 41, 66, 0.14);
+}
+
+.case-head {
+  background: var(--color-navy);
+  color: #fff;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.case-head .case-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.case-head .case-type {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.case-body {
+  padding: 22px 24px 26px;
+}
+
+.case-spec {
+  display: grid;
+  gap: 0;
+  margin-bottom: 20px;
+}
+
+.case-spec div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--color-border);
+  font-size: 0.9rem;
+}
+
+.case-spec div:last-child {
+  border-bottom: none;
+}
+
+.case-spec .k {
+  color: var(--color-text-light);
+}
+
+.case-spec .v {
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.case-result {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.case-result-item {
+  background: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px 12px;
+  text-align: center;
+}
+
+.case-result-item .year {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+  margin-bottom: 4px;
+}
+
+.case-result-item .amount {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1.2;
+}
+
+.case-result-item .amount span {
+  font-size: 0.95rem;
+}
+
+.case-result-item .per-year {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-navy);
+  margin-top: 6px;
+}
+
+.case-banner {
+  margin-top: 32px;
+  background: linear-gradient(120deg, var(--color-navy), var(--color-navy-dark));
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 28px 32px;
+}
+
+.case-banner h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+}
+
+.case-banner p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------- 比較（1社単独 vs Sunny Smile経由） ---------- */
+.versus {
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.versus-card {
+  border-radius: var(--radius);
+  padding: 28px 26px;
+  height: 100%;
+}
+
+.versus-card.before {
+  background: #f3f5f7;
+  border: 1px solid var(--color-border);
+}
+
+.versus-card.after {
+  background: var(--color-navy);
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(11, 41, 66, 0.22);
+}
+
+.versus-card h3 {
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+  color: var(--color-navy);
+}
+
+.versus-card.after h3 {
+  color: #fff;
+}
+
+.versus-card ul {
+  display: grid;
+  gap: 12px;
+}
+
+.versus-card li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.92rem;
+}
+
+.versus-card li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  font-size: 0.7rem;
+  top: 0.35em;
+  color: var(--color-text-light);
+}
+
+.versus-card.after li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.versus-card.after li::before {
+  color: var(--color-accent);
+}
+
+.versus-arrow {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--color-accent-dark);
+}
+
+/* ---------- お客様のご負担 ---------- */
+.burden-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.burden-item {
+  background: var(--color-gold-soft);
+  border: 1px solid #e8ddc4;
+  border-radius: var(--radius);
+  padding: 30px 20px;
+}
+
+.burden-item .big {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1.2;
+}
+
+.burden-item .big span {
+  font-size: 1.1rem;
+}
+
+.burden-item .label {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--color-navy);
+  font-weight: 600;
+}
+
+.burden-item .sub {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+}
+
+/* ---------- ステージバー（ご依頼の流れ） ---------- */
+.stage-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-bottom: 32px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.stage-bar div {
+  background: #eef2f5;
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.stage-bar div span {
+  display: block;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.stage-bar div:last-child {
+  background: var(--color-navy);
+  color: #fff;
+}
+
+.stage-bar div:last-child span {
+  color: var(--color-accent);
+}
+
+/* ---------- 補足ノート ---------- */
+.note-box {
+  background: var(--color-gold-soft);
+  border: 1px solid #e8ddc4;
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.note-box strong {
+  color: var(--color-navy);
+}
+
+.note-small {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-top: 14px;
+}
+
+/* ---------- 沿革（年号つき） ---------- */
+.history-item .year-badge {
+  display: inline-block;
+  min-width: 74px;
+  font-weight: 700;
+  color: var(--color-gold);
+  font-size: 1.05rem;
+  margin-right: 10px;
+}
+
+/* ---------- SDGsカードの公式カラー ---------- */
+.sdg-item.g07 { border-top: 4px solid #fcc30b; }
+.sdg-item.g09 { border-top: 4px solid #fd6925; }
+.sdg-item.g11 { border-top: 4px solid #fd9d24; }
+.sdg-item.g13 { border-top: 4px solid #3f7e44; }
+
+.sdg-item .goal-no {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--color-text-light);
+  margin-bottom: 6px;
+}
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 860px) {
+  .alert-band-inner,
+  .division-grid,
+  .case-grid,
+  .case-result,
+  .burden-grid {
+    grid-template-columns: 1fr;
+  }
+  .versus {
+    grid-template-columns: 1fr;
+  }
+  .versus-arrow {
+    transform: rotate(90deg);
+  }
+  .stage-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stage-bar {
+    grid-template-columns: 1fr;
+  }
+}

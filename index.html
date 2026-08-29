@@ -1,14 +1,18 @@
-<!-- Sunny Smile株式会社 サイト v3.7 / 2026-07-21: TOPページのメイン写真（4枚組）を新しい画像に差し替え。詳細は CHANGELOG.md を参照 -->
+<!-- Sunny Smile株式会社 サイト v4.0 / 2026-08-29: 会社案内2026に合わせてTOPページをリニューアル（市場動向バンド・2本部体制・削減実績・比較・ご負担・流れを追加）。詳細は CHANGELOG.md を参照 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sunny Smile株式会社 | 電力・環境改善・省エネ・断熱・空調コンサルティング</title>
-<meta name="description" content="Sunny Smile株式会社は製造業・工場の電力コストを最適化し、省エネ・断熱・空調まで一体で支援する、エネルギーの専門家集団です。">
+<title>Sunny Smile株式会社 | 製造業・工場の電力コンサルティング／環境改善・省エネ・断熱・空調</title>
+<meta name="description" content="Sunny Smile株式会社は、製造業・工場の高圧電力（100kW～・500kW・1,000kW以上）に特化した電力コンサルティング会社です。100社超の企業ネットワークでまとめて交渉し、切替検討費用0円・工事/停電なしでコストを最適化。太陽光発電・蓄電池・断熱塗料工事・空調最適化までワンストップで対応します。">
+<meta property="og:title" content="Sunny Smile株式会社 | 電力コストの最適化から、脱炭素の実現まで。">
+<meta property="og:description" content="製造業・工場に特化した電力コンサルティング。100社超のネットワークで、1社では届かない削減幅を引き出します。">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-v4.css">
 </head>
 <body>
 
@@ -19,7 +23,7 @@
     </a>
     <nav class="main-nav">
       <ul>
-        <li><a href="index.html">トップ</a></li>
+        <li><a href="index.html" class="is-active">トップ</a></li>
         <li><a href="company.html">会社概要</a></li>
         <li><a href="service.html">事業内容</a></li>
         <li><a href="sustainability.html">サステナビリティ</a></li>
@@ -36,16 +40,16 @@
   <section class="hero">
     <div class="hero-inner hero-grid">
       <div class="hero-content">
-        <span class="hero-eyebrow">POWER &amp; ENERGY INNOVATION</span>
+        <span class="hero-eyebrow">ENERGY CONSULTING &amp; ENVIRONMENTAL IMPROVEMENT</span>
         <h1>電力コストの最適化から、<br>脱炭素の実現まで。<br>次の一手を、共に描く。</h1>
-        <p>Sunny Smile株式会社は、製造業・工場の高圧契約に特化した電力コンサルティングと、環境改善・省エネ・断熱・空調コンサルティングを両輪に、30年間で培った企業のネットワーク力で、企業の未来を見据えた最適なエネルギー戦略をご提案します。</p>
+        <p>Sunny Smile株式会社は、製造業・工場の高圧契約（100kW～・500kW・1,000kW以上）に特化した電力コンサルティング会社です。30年で培った100社を超える企業ネットワークで使用電力をまとめて取り扱い、1社では引き出せない条件を実現します。さらに太陽光発電・蓄電池・断熱塗料工事・空調最適化までワンストップでご提案し、コスト削減と脱炭素を両立します。</p>
         <p style="font-size:0.9rem; color:var(--color-accent); font-weight:600; margin:-16px 0 32px; line-height:1.7;">
           エリア拡大！<br>
-          2025年6月より、関東・関西中心の対応から<br>
+          2025年6月より、従来の関東エリア中心の対応から<br>
           日本全国対応へ（沖縄・北海道を除く）
         </p>
         <div class="btn-group">
-          <a href="contact.html" class="btn btn-primary">お問い合わせはこちら</a>
+          <a href="contact.html" class="btn btn-primary">電力価格の適正診断を依頼する</a>
           <a href="service.html" class="btn btn-outline">事業内容を見る</a>
         </div>
       </div>
@@ -59,16 +63,16 @@
     <div class="container">
       <div class="stats-grid reveal-stagger">
         <div class="stat-item">
-          <span class="num">30<span>年</span></span>
-          <span class="label">の実績</span>
-        </div>
-        <div class="stat-item">
           <span class="num">100<span>社+</span></span>
           <span class="label">企業ネットワーク</span>
         </div>
         <div class="stat-item">
           <span class="num">30社中1位</span>
-          <span class="label">関東エリアの大手電力会社代理店で、製造業特化は弊社のみ</span>
+          <span class="label">関東エリアの大手電力会社代理店で、製造業特化は弊社のみ（2024年・2025年実績）</span>
+        </div>
+        <div class="stat-item">
+          <span class="num">0<span>円</span></span>
+          <span class="label">切替検討費用・切替費用</span>
         </div>
         <div class="stat-item">
           <span class="num">全国対応</span>
@@ -78,28 +82,44 @@
     </div>
   </section>
 
+  <section class="alert-band">
+    <div class="container alert-band-inner">
+      <div>
+        <span class="alert-tag">MARKET SITUATION</span>
+        <h2>「これまで通り」が、もっとも高くつく時代へ。</h2>
+        <p>
+          2026年4月より大手電力各社が新プランを導入。東京電力管内の法人向け電力プランは<span class="marker">7〜10％程度の値上げ</span>が見込まれています。
+          あわせて旧プラン・特別割引の廃止が進み、2026年からはすべてのお客様が一般価格メニューでの契約に。既存契約を前提とした資金計画は、見直しが必要な局面です。
+        </p>
+      </div>
+      <div>
+        <a href="contact.html" class="btn btn-primary">相場との照合を依頼する</a>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="container">
       <div class="section-head">
         <span class="section-eyebrow">STRENGTH</span>
-        <h2>選ばれる3つの理由</h2>
+        <h2>私たちが選ばれる3つの理由</h2>
         <p style="color:var(--color-navy);">専門知識と実績に基づき、お客様に最適なご提案をいたします。</p>
       </div>
       <div class="strengths-grid reveal-stagger">
         <div class="strength-card">
           <div class="strength-icon">🏭</div>
-          <h3>製造業・工場に特化</h3>
-          <p>契約電力100kW～・500kW・1000kW以上の高圧のお客様に特化。大手電力会社代理店の中でも、関東エリア30社中、製造業特化は弊社のみです。</p>
+          <h3>製造業への特化</h3>
+          <p>関東エリアの大手電力会社代理店のなかで、製造業に特化しているのは当社のみ。それぞれの工場特有の電力負荷を理解した提案が可能です。契約電力100kW～・500kW・1,000kW以上の高圧契約に対応します。</p>
         </div>
         <div class="strength-card">
           <div class="strength-icon">🤝</div>
-          <h3>30年の実績と100社超のネットワーク</h3>
-          <p>30年間で培った100社を超える企業ネットワークを活かし、電力需要をまとめて交渉することで、1社単独では実現できない大幅なコスト削減に貢献します。</p>
+          <h3>安定供給と安定価格</h3>
+          <p>30年で培った100社超の企業ネットワークを活用。電力自由化の開始から2024年現在まで、連続供給を頂いているお客様が多数です。これが、当社の調達力の裏づけです。</p>
         </div>
         <div class="strength-card">
           <div class="strength-icon">🌱</div>
-          <h3>SDGs・脱炭素までワンストップ</h3>
-          <p>電力コスト削減だけでなく、太陽光発電・蓄電池の設置や断熱塗装など、省エネ・脱炭素に関わる工事もあわせてご相談いただけます。</p>
+          <h3>ワンストップ対応</h3>
+          <p>電力削減からSDGs・脱炭素まで一貫対応。省エネ工事のみのご依頼も承ります。切替検討・切替費用は一切かかりません。</p>
         </div>
       </div>
     </div>
@@ -108,38 +128,34 @@
   <section class="bg-alt">
     <div class="container">
       <div class="section-head">
-        <span class="section-eyebrow">SERVICE</span>
-        <h2>事業内容</h2>
-        <p style="color:var(--color-navy);">電力コンサルティングと環境改善・省エネ・断熱・空調コンサルティングの<br>2つの領域でサポートします。</p>
+        <span class="section-eyebrow">BUSINESS DOMAINS</span>
+        <h2>事業領域</h2>
+        <p style="color:var(--color-navy);">人々の暮らしと環境を豊かにするために、<br>2つの分野で社会に貢献します。</p>
       </div>
-      <div class="service-grid reveal-stagger">
-        <div class="service-card">
-          <div class="service-card-media power">⚡</div>
-          <div class="service-card-body">
-            <span class="tag">POWER CONSULTING</span>
-            <h3>電力コンサルティング</h3>
-            <p>製造業・工場の高圧契約（100kW～・500kW・1000kW以上）に特化し、電力コストの最適化をトータルでご支援します。</p>
-            <ul>
-              <li>電力使用量・料金の分析</li>
-              <li>100社超のネットワークでまとめて交渉</li>
-              <li>コスト削減シミュレーション</li>
-            </ul>
-            <a href="service.html#power" class="card-link">詳しく見る</a>
-          </div>
+      <div class="division-grid reveal-stagger">
+        <div class="division-card">
+          <span class="division-badge">DIVISION 01</span>
+          <h3>ライフライン支援本部</h3>
+          <p class="division-lead">製造業・工場に特化した電力コンサルティングと、環境改善・省エネ提案をワンストップで。</p>
+          <ul>
+            <li>高圧電力コンサルティング（100kW～・500kW・1,000kW以上）</li>
+            <li>太陽光発電・蓄電池の設置提案</li>
+            <li>断熱塗料工事・工場修繕・暑さ寒さ対策</li>
+            <li>空調設備の最適化・更新提案</li>
+          </ul>
+          <p style="margin:20px 0 0;"><a href="service.html#power" class="card-link">詳しく見る</a></p>
         </div>
-        <div class="service-card">
-          <div class="service-card-media energy">🌿</div>
-          <div class="service-card-body">
-            <span class="tag">ENERGY-SAVING CONSULTING</span>
-            <h3>環境改善・省エネ・断熱・空調コンサルティング</h3>
-            <p>断熱性能の見直しや空調設備の最適化に加え、太陽光発電の導入まで、快適性とコスト削減を両立するご提案をいたします。</p>
-            <ul>
-              <li>太陽光発電・蓄電池の設置</li>
-              <li>断熱塗料工事・暑さ寒さ対策の施工</li>
-              <li>空調設備の最適化・更新提案</li>
-            </ul>
-            <a href="service.html#energy" class="card-link">詳しく見る</a>
-          </div>
+        <div class="division-card welfare">
+          <span class="division-badge">DIVISION 02</span>
+          <h3>福祉本部</h3>
+          <p class="division-lead">認可保育園の設立・運営で培った知見を活かし、コンサルティングで地域を支える。</p>
+          <ul>
+            <li>認可保育園のコンサルティング（保育士資格保有）</li>
+            <li>0〜2歳児保育を通じた子育て世帯の支援</li>
+            <li>高齢者介護サポート（関連会社にて実施）</li>
+            <li>女性が働きやすい環境づくりへの寄与</li>
+          </ul>
+          <p style="margin:20px 0 0;"><a href="service.html#welfare" class="card-link">詳しく見る</a></p>
         </div>
       </div>
     </div>
@@ -148,32 +164,165 @@
   <section>
     <div class="container">
       <div class="section-head">
-        <span class="section-eyebrow">FLOW</span>
-        <h2>ご依頼の流れ</h2>
-        <p>お問い合わせから提案まで、丁寧にサポートいたします。</p>
+        <span class="section-eyebrow">CASE STUDIES</span>
+        <h2>削減実績</h2>
+        <p>ご成約いただいた事例です。お客様の機密保持のため、社名は伏せて掲載しております。</p>
       </div>
-      <div class="flow-list reveal-stagger">
-        <div class="flow-item">
-          <h4>お問い合わせ</h4>
-          <p>フォームまたはお電話にてお気軽にご相談ください。</p>
+      <div class="case-grid reveal-stagger">
+        <div class="case-card">
+          <div class="case-head">
+            <span class="case-name">A社</span>
+            <span class="case-type">2輪車部品製造メーカー</span>
+          </div>
+          <div class="case-body">
+            <div class="case-spec">
+              <div><span class="k">契約電力</span><span class="v">200 kW</span></div>
+              <div><span class="k">電力料金（従前）</span><span class="v">約140万円 / 月</span></div>
+              <div><span class="k">契約形態</span><span class="v">2年契約</span></div>
+            </div>
+            <div class="case-result">
+              <div class="case-result-item">
+                <span class="year">2025</span>
+                <span class="amount">5<span>万円/月</span></span>
+                <span class="per-year">年間 約60万円 削減</span>
+              </div>
+              <div class="case-result-item">
+                <span class="year">2026</span>
+                <span class="amount">11<span>万円/月</span></span>
+                <span class="per-year">年間 約130万円 削減</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flow-item">
-          <h4>現状ヒアリング・調査</h4>
-          <p>現在の電力使用状況や設備について詳しくお伺いします。</p>
+        <div class="case-card">
+          <div class="case-head">
+            <span class="case-name">B社</span>
+            <span class="case-type">自動車部品メーカー</span>
+          </div>
+          <div class="case-body">
+            <div class="case-spec">
+              <div><span class="k">契約電力</span><span class="v">1,600 kW</span></div>
+              <div><span class="k">電力料金（従前）</span><span class="v">約580万円 / 月</span></div>
+              <div><span class="k">契約形態</span><span class="v">2年契約</span></div>
+            </div>
+            <div class="case-result">
+              <div class="case-result-item">
+                <span class="year">2025</span>
+                <span class="amount">25<span>万円/月</span></span>
+                <span class="per-year">年間 約300万円 削減</span>
+              </div>
+              <div class="case-result-item">
+                <span class="year">2026</span>
+                <span class="amount">56<span>万円/月</span></span>
+                <span class="per-year">年間 約680万円 削減</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flow-item">
-          <h4>ご提案</h4>
-          <p>分析結果をもとに、最適なプランをご提案します。</p>
+      </div>
+      <div class="case-banner reveal">
+        <h3>契約電力500kW以上は、非常に競争力があります。</h3>
+        <p>※ 切替のタイミング、現状の電力会社との契約状況などにより割引率は変わります。お会社様ごとに環境・条件が異なるため、個別での見極めとなります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">WHY</span>
+        <h2>なぜ、コスト削減が実現できるのか</h2>
+        <p style="color:var(--color-navy);">交渉のテーブルに載る「電力量」そのものが違います。</p>
+      </div>
+      <div class="versus reveal">
+        <div class="versus-card before">
+          <h3>1社単独での交渉</h3>
+          <ul>
+            <li>1社の消費電力は限られ、交渉材料になりにくい</li>
+            <li>本当に安いのか、相場との比較が困難</li>
+            <li>検討には時間も労力も必要</li>
+            <li>削減交渉そのものに限界がある</li>
+          </ul>
         </div>
-        <div class="flow-item">
-          <h4>導入・アフターフォロー</h4>
-          <p>導入後も効果検証やフォローを継続して行います。</p>
+        <div class="versus-arrow">▶</div>
+        <div class="versus-card after">
+          <h3>Sunny Smileを介した交渉</h3>
+          <ul>
+            <li>30年で培った100社超の企業ネットワークを活用</li>
+            <li>複数企業・工場の使用電力を<strong>まとめて取り扱う</strong></li>
+            <li>大手電力会社の正規代理店として直接交渉</li>
+            <li>大幅なコスト削減を実現</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note-small">※ 提携先は大きな発電所を保有している電力会社が中心です。安定供給を前提としたご提案を行います。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">YOUR COST</span>
+        <h2>お客様のご負担</h2>
+        <p>検討そのものに、費用も工事も発生しません。</p>
+      </div>
+      <div class="burden-grid reveal-stagger">
+        <div class="burden-item">
+          <span class="big">0<span>円</span></span>
+          <span class="label">切替検討費用・切替費用</span>
+        </div>
+        <div class="burden-item">
+          <span class="big">無し</span>
+          <span class="label">切替に伴う工事・停電</span>
+          <span class="sub">（基本的にありません）</span>
+        </div>
+        <div class="burden-item">
+          <span class="big">1<span>〜2週間</span></span>
+          <span class="label">資料ご提出からお見積提示まで</span>
         </div>
       </div>
     </div>
   </section>
 
   <section class="bg-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">FLOW</span>
+        <h2>ご依頼の流れ</h2>
+        <p style="color:var(--color-navy);">お預かりするのは、請求書2ヶ月分から。<br>複雑な手続きは当社と電力会社が行います。</p>
+      </div>
+      <div class="stage-bar reveal">
+        <div><span>STAGE 01</span>現状確認</div>
+        <div><span>STAGE 02</span>分析・お見積り</div>
+        <div><span>STAGE 03</span>お申込み・手続き</div>
+        <div><span>STAGE 04</span>供給開始・フォロー</div>
+      </div>
+      <div class="flow-list reveal-stagger">
+        <div class="flow-item">
+          <h4>現在の使用状況の確認</h4>
+          <p>2ヶ月分の電力会社様の請求書（表・裏）／夏季1ヶ月分（7〜9月）＋その他季1ヶ月分をご用意ください。</p>
+        </div>
+        <div class="flow-item">
+          <h4>分析・お見積りの作成</h4>
+          <p>1〜2週間で分析とお見積りを作成。ご提案可能な場合は、電力会社様からのお見積書をお渡しします。</p>
+        </div>
+        <div class="flow-item">
+          <h4>お申込み・切替手続き</h4>
+          <p>契約は電力会社様との直接契約。手間のかかる手続きは当社と電力会社で行います。</p>
+        </div>
+        <div class="flow-item">
+          <h4>供給開始・アフターフォロー</h4>
+          <p>供給開始に合わせて契約書がお手元に届きます。切替手続き中・供給開始後もご不明点はご案内いたします。</p>
+        </div>
+      </div>
+      <div class="note-box reveal" style="margin-top:28px;">
+        <strong>切替のタイミングについて。</strong>
+        東京電力様との契約は、一般的に4月に自動更新となる場合が多く、比較的スムーズに切り替えられるのは<strong>12月末までの切替申込</strong>です。お会社様ごとに環境・条件が異なりますので、個別での見極めとなります。まずはご相談ください。
+      </div>
+    </div>
+  </section>
+
+  <section>
     <div class="container">
       <div class="section-head">
         <span class="section-eyebrow">FAQ</span>
@@ -182,19 +331,27 @@
       <div class="faq-list reveal-stagger">
         <details class="faq-item">
           <summary>契約中の電力会社を変更する際、工事や停電は必要ですか？</summary>
-          <p>不要です。契約先の切り替えのみで、設備工事や停電は発生しません。</p>
+          <p>基本的に不要です。契約先の切り替えのみで、設備工事や停電は発生しません。</p>
+        </details>
+        <details class="faq-item">
+          <summary>検討にあたって費用はかかりますか？</summary>
+          <p>切替検討費用・切替費用ともに0円です。ご相談のみでも承ります。</p>
+        </details>
+        <details class="faq-item">
+          <summary>まず何を用意すればよいですか？</summary>
+          <p>電力会社様の請求書2ヶ月分（表・裏／夏季1ヶ月分＋その他季1ヶ月分）からご相談いただけます。過去1年間の電力使用量や、現在の契約書の写しがあるとより精緻な分析が可能です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>切替のタイミングはいつが良いですか？</summary>
+          <p>東京電力様との契約は4月に自動更新となる場合が多く、比較的スムーズなのは12月末までの切替申込です。契約期間や違約金の有無を確認したうえで、最適な時期を見極めます。</p>
         </details>
         <details class="faq-item">
           <summary>対応エリアはどこまでですか？</summary>
           <p>2025年6月より対応エリアを拡大し、沖縄・北海道を除く日本全国のお客様にご相談いただけます。</p>
         </details>
         <details class="faq-item">
-          <summary>相談だけでも可能ですか？</summary>
-          <p>もちろんです。現在のご契約内容が適正な相場かどうかの診断のみでも、お気軽にお問い合わせください。</p>
-        </details>
-        <details class="faq-item">
           <summary>省エネ工事だけの依頼も可能ですか？</summary>
-          <p>可能です。断熱塗装や空調更新、太陽光発電の設置など、必要な工事のみのご依頼にも対応しています。</p>
+          <p>可能です。断熱塗料工事や空調更新、太陽光発電・蓄電池の設置など、必要な工事のみのご依頼にも対応しています。</p>
         </details>
       </div>
     </div>
@@ -202,9 +359,12 @@
 
   <section class="cta">
     <div class="container">
-      <h2>まずはお気軽にご相談ください</h2>
-      <p>電力コスト・省エネ対策でお悩みの方は、お電話またはメールでお気軽にご連絡ください。</p>
-      <a href="contact.html" class="btn btn-primary">お問い合わせはこちら</a>
+      <h2>1円でも経費を節約し、他社との競争力をつけませんか。</h2>
+      <p>まずはお客様の電力価格が適正な相場価格かを確認させていただきます。ご相談のみでも承ります。</p>
+      <div class="btn-group" style="justify-content:center;">
+        <a href="contact.html" class="btn btn-primary">お問い合わせはこちら</a>
+        <a href="tel:05068827183" class="btn btn-outline">TEL 050-6882-7183</a>
+      </div>
     </div>
   </section>
 
@@ -214,7 +374,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <p>製造業・工場の電力コストを最適化し、省エネ・断熱・空調まで一体で支援する、エネルギーの専門家集団です。</p>
+        <p>製造業・工場の電力コストを最適化し、省エネ・断熱・空調まで一体で支援する、エネルギーの専門家集団です。福祉本部では、保育・介護のコンサルティングを通じて地域の暮らしを支えています。</p>
       </div>
       <div class="footer-col">
         <h4>サイトメニュー</h4>

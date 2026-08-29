@@ -1,14 +1,15 @@
-<!-- Sunny Smile株式会社 サイト v3.1 / 2026-07-16: 電話番号（本社050-6882-7183）・受付時間・郵便番号を更新。詳細は CHANGELOG.md を参照 -->
+<!-- Sunny Smile株式会社 サイト v4.0 / 2026-08-29: 会社案内2026に合わせて「ご相談前にご用意いただくもの」「ご負担」を追記。詳細は CHANGELOG.md を参照 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>お問い合わせ | Sunny Smile株式会社</title>
-<meta name="description" content="Sunny Smile株式会社へのお問い合わせはこちらから。電力コンサルティング、環境改善・省エネ・断熱・空調コンサルティングに関するご相談を承ります。">
+<meta name="description" content="Sunny Smile株式会社へのお問い合わせはこちらから。電力コンサルティング、環境改善・省エネ・断熱・空調コンサルティングに関するご相談を承ります。切替検討費用・切替費用は0円です。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-v4.css">
 </head>
 <body>
 
@@ -24,7 +25,7 @@
         <li><a href="service.html">事業内容</a></li>
         <li><a href="sustainability.html">サステナビリティ</a></li>
         <li><a href="news.html">お知らせ</a></li>
-        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="contact.html" class="is-active">お問い合わせ</a></li>
       </ul>
     </nav>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false"></button>
@@ -37,7 +38,7 @@
     <div class="container">
       <span class="hero-eyebrow">CONTACT</span>
       <h1>お問い合わせ</h1>
-      <p>電力コスト・省エネ対策に関するご相談は、お気軽にお問い合わせください。</p>
+      <p>まずは、現在の電力価格が適正かの確認から。ご相談のみでも承ります。</p>
     </div>
   </section>
 
@@ -79,13 +80,69 @@
     </div>
   </section>
 
+  <section class="bg-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">PREPARATION</span>
+        <h2>ご相談前にご用意いただくもの</h2>
+        <p style="color:var(--color-navy);">お預かりするのは、請求書2ヶ月分から。<br>お手元にない場合も、まずはご連絡ください。</p>
+      </div>
+      <div class="strengths-grid reveal-stagger">
+        <div class="strength-card">
+          <div class="strength-icon">📄</div>
+          <h3>電力会社様の請求書（2ヶ月分）</h3>
+          <p>表・裏の両面。夏季1ヶ月分（7〜9月）＋その他季1ヶ月分をご用意ください。</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-icon">📊</div>
+          <h3>過去1年間の電力使用量</h3>
+          <p>エクセル等のデータがあれば、より精緻な分析が可能です。</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-icon">📅</div>
+          <h3>現在の契約（使用）開始時期</h3>
+          <p>不明な場合は、電力会社様との契約書の写しをご用意ください。</p>
+        </div>
+      </div>
+      <p class="note-small">※ 特殊な電力契約の場合、契約期間および切替時の違約金の有無を確認するため、追加資料が必要となる場合があります。</p>
+
+      <h3 style="color:var(--color-navy); margin:40px 0 16px;">お客様のご負担</h3>
+      <div class="burden-grid reveal-stagger">
+        <div class="burden-item">
+          <span class="big">0<span>円</span></span>
+          <span class="label">切替検討費用・切替費用</span>
+        </div>
+        <div class="burden-item">
+          <span class="big">無し</span>
+          <span class="label">切替に伴う工事・停電</span>
+          <span class="sub">（基本的にありません）</span>
+        </div>
+        <div class="burden-item">
+          <span class="big">1<span>〜2週間</span></span>
+          <span class="label">資料ご提出からお見積提示まで</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>まずは、現在の電力価格が適正かの確認から。</h2>
+      <p>ご相談のみでも承ります。省エネ工事のみのご依頼も可能です。</p>
+      <div class="btn-group" style="justify-content:center;">
+        <a href="tel:05068827183" class="btn btn-primary">TEL 050-6882-7183</a>
+        <a href="mailto:sunny-smile@dc4.so-net.ne.jp" class="btn btn-outline">メールで問い合わせる</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <p>製造業・工場の電力コストを最適化し、省エネ・断熱・空調まで一体で支援する、エネルギーの専門家集団です。</p>
+        <p>製造業・工場の電力コストを最適化し、省エネ・断熱・空調まで一体で支援する、エネルギーの専門家集団です。福祉本部では、保育・介護のコンサルティングを通じて地域の暮らしを支えています。</p>
       </div>
       <div class="footer-col">
         <h4>サイトメニュー</h4>
